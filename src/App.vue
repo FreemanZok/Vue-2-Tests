@@ -1,7 +1,7 @@
 <template>
   <v-app>
-    <Header></Header>
-
+    <Header />
+    <Body />
     <router-view />
 
   </v-app>
@@ -10,10 +10,12 @@
 <script>
 
 import Header from "@/components/Header.vue"
+import Body from "@/components/Body.vue"
 export default {
   name: 'App',
   components: {
     Header,
+    Body
   },
   data: () => ({}),
 };
@@ -26,5 +28,8 @@ export default {
     width: 80px;
     height: 30PX;
   }
+}
+.theme--light.v-application{
+  background: #fcfdff !important;
 }
 </style>

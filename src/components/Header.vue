@@ -3,7 +3,7 @@
     <div>
       <div class="top-container">
         <div class="img-wrapper ">
-          9:10
+          {{timeString}}
         </div>
         <div class="">
           <v-icon small color="gray darken-2">
@@ -14,7 +14,7 @@
     </div>
     <div class="my-container">
       <div class="bott">
-        <div class="img-wrapper float-left">
+        <div class="img-wrapper">
           <img class="h-100 w-100" src="@/assets/img/minista.png" alt="">
         </div>
         <div class="">
@@ -22,9 +22,8 @@
             mdi-bell
           </v-icon>
           <v-avatar size="36px">
-            <img alt="Avatar" src="@/assets/img/hello.jpg"> 
+            <img alt="Avatar" src="@/assets/img/hello.jpg">
           </v-avatar>
-          
         </div>
       </div>
     </div>
@@ -36,8 +35,23 @@ export default {
   name: 'my-header',
 
   data: () => ({
-
+    timeString: null,
   }),
+  computed: {
+  },
+  methods: {
+    getTime() {
+      let d = new Date();
+      this.timeString = d.toTimeString().slice(0, 5)
+    }
+  },
+  mounted() {
+    this.getTime()
+
+    setInterval(() => {
+      this.getTime()
+    }, 60000);
+  }
 }
 </script>
 <style scoped>
