@@ -1,6 +1,7 @@
 <template>
   <div class="home">
-    hello
+    this is a pass
+    
   </div>
 </template>
 
