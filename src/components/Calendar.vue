@@ -1,5 +1,6 @@
 <template>
     <v-sheet height="300">
+        
         <v-calendar ref="calendar" :now="today" :value="today" :events="events" color="primary" type="week">
         </v-calendar>
     </v-sheet>

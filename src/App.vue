@@ -22,8 +22,8 @@ export default {
 
 .img-wrapper {
   img {
-    width: 80px;
-    height: 30PX;
+    width: 130px;
+    height: 34px;
   }
 }
 .theme--light.v-application{

@@ -10,19 +10,20 @@
             Laundry
           </span>
         </div>
-        <v-icon small color="gray darken-2">
+        <v-icon medium color="gray darken-2">
           mdi-magnify
         </v-icon>
       </div>
       <div class="d-flex">
-        <div class="elements">
+        <div class="elements mr-2">
           <div v-for="el in elements" :key="el" class=" mb-2">
             <Element :data="el" />
           </div>
         </div>
-        <div class="calendar-wrapper pl-2">
+        <div class="calendar-wrapper">
           <!-- <Calendar /> -->
-          <Calendar2 />
+          <!-- <Calendar2 /> -->
+          <Calendar3 />
         </div>
       </div>
     </div>
@@ -32,34 +33,56 @@
 <script>
 import Element from "@/components/Element.vue"
 // import Calendar from "@/components/Calendar.vue"
-import Calendar2 from "@/components/Calendar2.vue"
+// import Calendar2 from "@/components/Calendar2.vue"
+import Calendar3 from "@/components/Calendar3.vue"
 
 export default {
   name: 'my-header',
   components: {
     Element,
     // Calendar,
-    Calendar2,
+    // Calendar2,
+    Calendar3,
   },
   data: () => ({
-    elements: [{
-      name: "Jane Cooper",
-      cost: 21,
-      job: "Laundry Services",
-      score: 2.5,
-      reviews: 3.82,
-      active: true,
-      image: "222222.png",
-    },
-    {
-      name: "alizoka",
-      cost: 21,
-      job: "Laundry Services",
-      score: 2.5,
-      reviews: 3.82,
-      active: true,
-      image: "222222.png",
-    },
+    elements: [
+      {
+        name: "alizoka",
+        cost: 21,
+        job: "Laundry Woman Services",
+        score: 2.5,
+        reviews: 3.82,
+        active: true,
+        image: "555555.png",
+      },
+      {
+        name: "alizoka",
+        cost: 21,
+        job: "Laundry Services",
+        score: 2.5,
+        reviews: 3.82,
+        active: true,
+        image: "222222.png",
+      },
+      {
+        name: "Jane Cooper",
+        cost: 21,
+        job: "Laundry Services",
+        score: 2.5,
+        reviews: 3.82,
+        active: true,
+        image: "333333.png",
+      },
+      {
+        name: "alizoka",
+        cost: 21,
+        job: "Laundry Woman Services",
+        score: 2.5,
+        reviews: 3.82,
+        active: true,
+        image: "Screenshot 2022-11-29 113943.png",
+      },
+
     ]
   }),
   computed: {},
@@ -72,10 +95,16 @@ export default {
   display: flex;
   justify-content: space-between;
 }
-.elements{
+
+.elements {
   width: calc(100% - 300px)
 }
-.calendar-wrapper{
+
+.calendar-wrapper {
   width: 300px;
+  height: 360px;
+  box-shadow: 0 0 5px #dedede;
+  border-radius: 12px;
+  overflow: hidden;
 }
 </style>

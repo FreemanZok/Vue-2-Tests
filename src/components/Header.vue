@@ -1,7 +1,7 @@
 <template>
   <div class="my-header py-2">
     <div>
-      <div class="top-container">
+      <div class="top-container mb-2">
         <div class="img-wrapper ">
           {{timeString}}
         </div>
