@@ -16,6 +16,10 @@
                 mdi-chevron-left
               </v-icon>
             </v-btn>
+            
+            <v-toolbar-title v-if="$refs.calendar">
+              {{ $refs.calendar.title }}
+            </v-toolbar-title>
             <v-btn
               fab
               text
@@ -27,9 +31,6 @@
                 mdi-chevron-right
               </v-icon>
             </v-btn>
-            <v-toolbar-title v-if="$refs.calendar">
-              {{ $refs.calendar.title }}
-            </v-toolbar-title>
             <!-- <v-spacer></v-spacer> -->
             <!-- <v-menu
               bottom
@@ -65,7 +66,7 @@
             </v-menu> -->
           </v-toolbar>
         </v-sheet>
-        <v-sheet height="300">
+        <v-sheet height="230">
           <v-calendar
             ref="calendar"
             v-model="focus"
@@ -226,5 +227,6 @@
 <style scoped>
 .fill-height{
     border-radius: 15px;
+    height: auto !important;
 }
 </style>

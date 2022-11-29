@@ -14,16 +14,17 @@
           mdi-magnify
         </v-icon>
       </div>
-      <div class="d-flex">
-        <div class="elements mr-2">
+      <div class="d-flex justify-space-between">
+        <div class="elements">
           <div v-for="el in elements" :key="el" class=" mb-2">
             <Element :data="el" />
           </div>
         </div>
-        <div class="calendar-wrapper">
+        <div class="calendar-wrapper pt-0 text-center">
           <!-- <Calendar /> -->
           <!-- <Calendar2 /> -->
-          <Calendar3 />
+          <Calendar3 class="mb-2"/>
+          <v-btn class="white--text view" color="#7210ff">View All Schedule</v-btn>
         </div>
       </div>
     </div>
@@ -97,14 +98,18 @@ export default {
 }
 
 .elements {
-  width: calc(100% - 300px)
+  width:calc(100% - 293px)
 }
 
 .calendar-wrapper {
-  width: 300px;
-  height: 360px;
+  width: 280px;
+  height: 348px;
   box-shadow: 0 0 5px #dedede;
   border-radius: 12px;
   overflow: hidden;
+  padding: 7px;
+}
+button.view{
+  border-radius: 10px !important;
 }
 </style>
