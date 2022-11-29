@@ -3,7 +3,6 @@
     <Header />
     <Body />
     <router-view />
-
   </v-app>
 </template>
 
