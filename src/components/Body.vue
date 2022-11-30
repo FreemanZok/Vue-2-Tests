@@ -53,7 +53,7 @@ export default {
         job: "Laundry Woman Services",
         score: 2.5,
         reviews: 3.82,
-        active: true,
+        active: false,
         image: "555555.png",
       },
       {
@@ -71,7 +71,7 @@ export default {
         job: "Laundry Services",
         score: 2.5,
         reviews: 3.82,
-        active: true,
+        active: false,
         image: "333333.png",
       },
       {

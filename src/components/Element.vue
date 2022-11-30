@@ -27,11 +27,11 @@
         <span>reviews</span>
       </div>
     </div>
-    <div class="tag-active">
+    <div class="tag-active" :class="{'not-active' : !data.active}">
       <v-icon small color="#7c3eee">
         mdi-bookmark
       </v-icon>
-      <v-icon class="empty-bookmark">
+      <v-icon v-if="!data.active" class="empty-bookmark">
         mdi-bookmark
       </v-icon>
     </div>
@@ -81,7 +81,9 @@ export default {
   right: 10px;
   top: 5px;
 }
-
+.not-active.tag-active{
+  right: -5px;
+}
 .v-avatar {
   img {
     border-radius: 18px;
