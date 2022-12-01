@@ -9,12 +9,18 @@
 
 
 import Body from "@/components/Body.vue"
+import test from "./test.js"
 export default {
   name: 'Home',
   components: {
     Body
   },
-  data: () => ({}),
+  data: () => ({
+    test:test,
+  }),
+  mounted(){
+    console.log(test)
+  }
 };
 
 </script>
