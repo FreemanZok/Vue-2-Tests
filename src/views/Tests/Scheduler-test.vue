@@ -9,12 +9,16 @@
       </v-col>
     </v-row>
     <div class="first-shcheduler">
-      
+      <Scheduler1 />
     </div>
   </div>
 </template>
 <script>
+import Scheduler1 from "../../components/Calendar.vue"
 export default {
+  components:{
+    Scheduler1
+  },
   data: () => ({
     today: '2019-01-08',
     events: [
