@@ -11,10 +11,15 @@ const routes = [
     component: Home
   },
   {
-    path: '/about',
-    name: 'About',
-    component: () => import('../views/About.vue')
-  }
+    path: '/test/Scheduler',
+    name: 'Scheduler-test',
+    component: () => import('../views/Tests/Scheduler-test.vue')
+  },
+  {
+    path: '/test/button',
+    name: 'Button',
+    component: () => import('../views/Tests/my-button.vue')
+  },
 ]
 
 const router = new VueRouter({
